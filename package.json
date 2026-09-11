@@ -1,0 +1,57 @@
+{
+  "name": "@seranox/agent-kit",
+  "version": "0.1.0",
+  "description": "Build, backtest, and publish Seranox trading agents: typed strategy hooks, a polling runner, a local backtester, bonded listing manifests, and tool adapters for Vercel AI SDK / LangChain / MCP.",
+  "license": "MIT",
+  "homepage": "https://seranox.xyz",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seranoxxyz/seranox-agent-kit.git"
+  },
+  "author": "Seranox",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "example": "tsx examples/clean-launch-sniper.ts"
+  },
+  "keywords": [
+    "seranox",
+    "sera",
+    "robinhood-chain",
+    "trading-agents",
+    "ai-agents",
+    "backtest"
+  ],
+  "packageManager": "pnpm@11.8.0",
+  "dependencies": {
+    "@seranox/sdk": "file:../seranox-sdk",
+    "zod": "^4.6.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^22.20.2",
+    "eslint": "^10.10.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.23.13",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.70.0",
+    "vitest": "^5.0.0"
+  }
+}
