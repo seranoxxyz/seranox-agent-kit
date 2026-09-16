@@ -22,7 +22,9 @@ jobs:
         with:
           repository: seranoxxyz/seranox-sdk
           path: seranox-sdk
-      - uses: pnpm/action-setup@v4 # pnpm version comes from package.json packageManager
+      - uses: pnpm/action-setup@v4 # pnpm version comes from packageManager (repo is checked out under main/)
+        with:
+          package_json_file: main/package.json
       - uses: actions/setup-node@v4
         with:
           node-version: 22
